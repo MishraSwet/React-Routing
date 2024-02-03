@@ -1,0 +1,4 @@
+Hook inside react-router-dom
+const navigate=useNavigate();
+navigate(route)
+This is not full reload but actual client side rendering
