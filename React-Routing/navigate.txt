@@ -1,0 +1,3 @@
+window.location.href="Route" 
+this is not client side rendering but rather same as reload so with each request its just another 
+html js css bundle from the server
