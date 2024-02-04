@@ -6,16 +6,18 @@ export default function App() {
   const [Count, setCount] = useState(0);
   return (
     <>
-      <CountRenderer Count={Count} />
-      <Buttons Count={Count} setCount={setCount} />
+      <CountRenderer Count={Count} setCount={setCount} />
     </>
   );
 }
 
-function CountRenderer({Count}) {
+
+// Here CountRenderer Component doesnt need setCount as prop but its child does so we have to drill the setCount prop through the CountRenderComponent..
+function CountRenderer({Count,setCount}) {
   return (
     <div>
-    {Count}
+      {Count}
+      <Buttons Count={Count} setCount={setCount} />
     </div>
   )
 }
