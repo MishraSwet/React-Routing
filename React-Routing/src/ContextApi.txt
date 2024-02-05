@@ -1,0 +1,1 @@
+Context Api is a workaround on prop-drilling allowing teleportation of state rather than prop drilling..
