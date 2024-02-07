@@ -30,3 +30,11 @@ function Buttons({ Count, setCount }) {
   )
 }
 
+
+//Using Context API
+
+//in Another file...
+//init the context the contesxt is responsible for teleporting state..
+import { useContext } from "react";
+CountContext = useContext(0);
+
