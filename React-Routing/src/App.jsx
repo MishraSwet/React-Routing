@@ -36,5 +36,14 @@ function Buttons({ Count, setCount }) {
 //in Another file...
 //init the context the contesxt is responsible for teleporting state..
 import { useContext } from "react";
-CountContext = useContext(0);
+CreatedContext = useContext(0);
 
+//Since count rendered didnt need setCount but its child did we had do drill setCount but now,we can simply teleport it through by using context we provide it to the context provider..
+
+<CreatedContext.provider value={setCount}>
+<Count Count={Count}/>
+</CreatedContext.provider>
+
+//Now inside the function till which the prop was drilled
+
+const count = useContext(CreatedContext);
